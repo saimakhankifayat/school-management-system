@@ -8,7 +8,13 @@
 **Teacher record**
 - name
 - Father Name
+- Education
+- class
 **Student fee record**
+- Name
+- Fee Amount
+- month
+- Payment date
 
 
 
