@@ -1,2 +1,8 @@
 # school-management-system
-I am learning html in css programming.
+# Features 
+* Student information
+* Student exam record
+* Student fee record
+
+
+
