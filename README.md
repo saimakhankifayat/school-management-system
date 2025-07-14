@@ -1,7 +1,13 @@
 # school-management-system
 # Features 
 * Student information
-* Student exam record
+ - Name
+ - class
+ - section
+ - DOB
+*  Teacher record
+- name
+- Father Name
 * Student fee record
 
 
