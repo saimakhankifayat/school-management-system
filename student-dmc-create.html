@@ -30,6 +30,7 @@
         </nav>
         <main class="main-content">
             <div class="form">
+                <input type="text" id="student_name" placeholder=" Enter a student name..." onkeyup="showStudentName()">
                 <div class="dmc">
 
                     <div class="dmc-title">
@@ -42,7 +43,7 @@
                                 alt="Student Picture" class="student-pic">
                         </div>
                         <div class="student-info">
-                            <p><strong>Student Name:</strong> Saima kifayat</p>
+                            <p><strong>Student Name:</strong> <div id="show_student_name"></div> </p>
                             <p><strong>Father's Name:</strong> Mr.kifayat Khan</p>
                             <p><strong>Class:</strong> 10th Grade</p>
                             <p><strong>Student ID:</strong> 2025-10-AK</p>
@@ -196,7 +197,10 @@
             document.getElementById("grade").classList.remove("fail");
         }
     }
-
+function showStudentName() {
+    var studentName = document.getElementById("student_name").value;
+    document.getElementById("show_student_name").innerHTML = studentName;
+}
 
 /*
 
