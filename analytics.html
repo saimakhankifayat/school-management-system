@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analytics Dashboard</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/analytics.css">
+  </head>
+  <body>
+   <nav>
+                <ul>
+                    <li><a href="dashborad.html">Dashboard</a></li>
+                    <li><a href="analytics.html">Analytics</a></li>
+                    <li><a href="teacher-form.html">Teacher form</a></li>
+                    <li><a href="#">Student </a>
+                    <ul>
+                        <li><a href="student-form.html">Student Record </a></li>
+                        <li><a href="student-dmc-create.html">Create DMC </a></li>
+                        <li><a href="student-dmc.html">view DMC</a></li>
+                    </ul>
+                    
+                    </li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="index.html">Sign out</a></li>
+                </ul>
+            </nav>
+
+    <main class="analytics-container">
+      <h2>Analytics Overview</h2>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>Total Students</h3>
+          <p>850</p>
+        </div>
+        <div class="card">
+          <h3>Average Attendance</h3>
+          <p>92%</p>
+        </div>
+        <div class="card">
+          <h3>Active Teachers</h3>
+          <p>45</p>
+        </div>
+        <div class="card">
+          <h3>Pending Assignments</h3>
+          <p>127</p>
+        </div>
+      </div>
+
+      <section class="charts">
+        <h2>Charts & Reports</h2>
+        <section class="attendance-section">
+          <h2>Monthly Attendance</h2>
+          <div class="attendance-table-container">
+            <table class="attendance-table">
+              <thead>
+                <tr>
+                  <th>Student Name</th>
+                  <th>Grade</th>
+                  <th>Days Present</th>
+                  <th>Days Absent</th>
+                  <th>Attendance %</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>John Doe</td>
+                  <td>Grade 5</td>
+                  <td>20</td>
+                  <td>2</td>
+                  <td>90.9%</td>
+                </tr>
+                <tr>
+                  <td>Jane Smith</td>
+                  <td>Grade 6</td>
+                  <td>21</td>
+                  <td>1</td>
+                  <td>95.4%</td>
+                </tr>
+                <tr>
+                  <td>Liam Khan</td>
+                  <td>Grade 5</td>
+                  <td>19</td>
+                  <td>3</td>
+                  <td>86.3%</td>
+                </tr>
+                <tr>
+                  <td>Emma Johnson</td>
+                  <td>Grade 6</td>
+                  <td>20</td>
+                  <td>2</td>
+                  <td>90.9%</td>
+                  <!-- Add more rows as needed -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+          <div class="chart-box">
+            <h4>Grade Distribution</h4>
+            <img src="images/grades-pie.png" alt="Grade Distribution Pie" />
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        &copy; 2023 School Management System
+      </footer>
+
+    </body>
+  </html>

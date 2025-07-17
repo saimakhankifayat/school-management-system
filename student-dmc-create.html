@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/student-form.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="dashborad.html">Dashboard</a></li>
+                <li><a href="analytics.html">Analytics</a></li>
+                <li><a href="teacher-form.html">Teacher form</a></li>
+                <li><a href="#">Student </a>
+                    <ul>
+                        <li><a href="student-form.html">Student Record </a></li>
+                        <li><a href="student-dmc-create.html">Create DMC </a></li>
+                        <li><a href="student-dmc.html">view DMC</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="index.html">Sign out</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <div class="form">
+                <div class="dmc">
+
+                    <div class="dmc-title">
+                        <h1>Detail Marks Sheet (DMC)</h1>
+                    </div>
+
+                    <div class="dmc-header">
+                        <div class="school-logo">
+                            <img src="https://images.pexels.com/photos/1337380/pexels-photo-1337380.jpeg"
+                                alt="Student Picture" class="student-pic">
+                        </div>
+                        <div class="student-info">
+                            <p><strong>Student Name:</strong> Saima kifayat</p>
+                            <p><strong>Father's Name:</strong> Mr.kifayat Khan</p>
+                            <p><strong>Class:</strong> 10th Grade</p>
+                            <p><strong>Student ID:</strong> 2025-10-AK</p>
+                        </div>
+                        <div class="student-pic-container">
+                            <img src="https://images.pexels.com/photos/2169434/pexels-photo-2169434.jpeg"
+                                alt="Student Picture" class="student-pic">
+                        </div>
+                    </div>
+
+                    <div class="mypage">
+                        <form method="get" action="student-dmc.html">
+                            <table>
+                                <tr>
+                                    <td>SNo.</td>
+                                    <td>Subject</td>
+                                    <td>Total Marks</td>
+                                    <td>Obtained Marks</td>
+                                    <td>Grade</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>English</td>
+                                    <td>100 </td>
+                                    <td> <input name="English" id="English" value="0"></td>
+                                    <td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>COMPUTER</td>
+                                    <td>100 </td>
+                                    <td> <input name="Computer" id="Computer" value="0"></td>
+                                    <td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>PAK.STUDY</td>
+                                    <td>100 </td>
+                                    <td> <input name="Pak_Study"  id="Pak_Study" value="0"></td>
+                                    <td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Math</td>
+                                    <td>100 </td>
+                                    <td> <input name="Math" id="Math" value="0"></td>
+                                    <td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>URDU</td>
+                                    <td>100 </td>
+                                    <td> <input name="Urdu" id="Urdu" value="0"></td>
+                                    <td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>ISLAMIYAT</td>
+                                    <td>100 </td>
+                                    <td> <input name="Islamiyat" id="Islamiyat" value="0"></td>
+                                    <td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>SCIENCE</td>
+                                    <td>100 </td>
+                                    <td> <input name="Science" id="Science" value="0"></td>
+                                    <td>A</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"><strong>OBTAINED MARKS</strong>
+                                    </td>
+                                    <td><strong><div id="total_obtained_marks">0</div>
+
+                                   </strong></td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"><strong>OBTAINED
+                                            PERCENTAGE</strong> </td>
+                                    <td><strong><div id="percentage">0%</div></strong></td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"><strong>OBTAINED Grade</strong>
+                                    </td>
+                                    <td><strong><div id="grade">A</div>
+
+                                    </strong></td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </table>
+                            <button type="button" onclick="gettotalmarks()">Calculate
+                                Marks</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            &copy; 2023 Drixal School Management System. All rights
+            reserved.
+        </footer>
+    </div>
+</body>
+
+</html>
+<script>
+    var English = 0;
+    var Computer = 0; 
+    var Pak_Study = 0;
+    var Math = 0;
+    var Urdu = 0;
+    var Islamiyat = 0;
+    var Science = 0;
+    var total_obtained_marks = 0;
+    var percentage = 0.0; 
+    var grade = "";
+    function gettotalmarks() {
+        English = parseInt(document.getElementById("English").value) || 0;
+        Computer = parseInt(document.getElementById("Computer").value) || 0;
+        Pak_Study = parseInt(document.getElementById("Pak_Study").value) || 0;
+        Math = parseInt(document.getElementById("Math").value) || 0;
+        Urdu = parseInt(document.getElementById("Urdu").value) || 0;
+        Islamiyat = parseInt(document.getElementById("Islamiyat").value) || 0;
+        Science = parseInt(document.getElementById("Science").value) || 0;
+
+        total_obtained_marks = English + Computer + Pak_Study + Math + Urdu + Islamiyat + Science;
+
+        document.getElementById("total_obtained_marks").innerHTML = total_obtained_marks;
+
+        percentage = (total_obtained_marks / 700) * 100; // Assuming total marks are 700
+        document.getElementById("percentage").innerHTML = percentage.toFixed(2) + "%";
+        if (percentage >= 90) {
+            grade = "A+";
+        } else if (percentage >= 80) {
+            grade = "A";
+        } else if (percentage >= 70) {
+            grade = "B";
+        } else if (percentage >= 60) {
+            grade = "C";
+        } else if (percentage >= 50) {
+            grade = "D";
+        } else {
+            grade = "F";
+        }
+        document.getElementById("grade").innerHTML = grade;
+        if (grade === "F") {
+            document.getElementById("grade").classList.add("fail");
+        } else {
+            document.getElementById("grade").classList.remove("fail");
+        }
+    }
+
+
+/*
+
+
+var valueA = 5;
+var valueB = 10;
+
+
+
+    
+function addTwoNumbers( a, b) {
+    return a + b;
+  
+}
+var valueC = addTwoNumbers(valueA, valueB);
+document.getElementById("total_obtained_marks").innerHTML = valueC;
+*/
+</script>

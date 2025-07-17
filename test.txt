@@ -1,0 +1,10 @@
+    var English = document.getElementById("English");
+    var Computer = document.getElementById("Computer"); 
+    var Pak_Study = document.getElementById("Pak_Study");
+    var Math = document.getElementById("Math");
+    var Urdu = document.getElementById("Urdu");
+    var Islamiyat = document.getElementById("Islamiyat");
+    var Science = document.getElementById("Science");
+    var total_obtained_marks = document.getElementById("total_obtained_marks");
+    var percentage = document.getElementById("percentage"); 
+    var grade = document.getElementById("grade");

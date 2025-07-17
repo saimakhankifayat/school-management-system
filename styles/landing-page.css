@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eaf4ff;
+    /* light blue base */
+    color: #123e6d;
+    /* deep navy text */
+    line-height: 1.6;
+}
+
+
+/* header */
+header {
+    background-color: #0246ff;
+    color: white;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    /* Vertically center all items */
+    justify-content: space-between;
+    /* Space out main sections */
+}
+
+/* Container for logo and h1 to keep them near each other */
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo styles */
+.header .logo {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    /* Spacing between logo and h1 */
+}
+
+/* Style the logo image to be exactly 100px by 100px */
+.header .logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    /* maintain aspect ratio within the box */
+}
+
+/* h1 styles */
+header h1 {
+    font-size: 2rem;
+    margin: 20;
+    /* Remove default margin to align better */
+}
+
+/* Navigation styles */
+header nav {
+    /* No need for margin here if it's spaced with flexbox */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav li {
+    margin-left: 1rem;
+  
+}
+
+header nav a {
+    text-decoration: none;
+    color: rgb(56, 55, 55);
+      background-color: #cccccc;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+}
+header nav a:hover {
+    text-decoration: none;
+    color:  #cccccc;
+    background-color:  rgb(56, 55, 55);
+}
+
+/* end of header*/
+
+main {
+    padding: 2rem 1rem;
+    margin: auto;
+}
+
+
+section {
+    margin-bottom: 3rem;
+}
+
+
+.intro p {
+    background-color: #d6ebff;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+
+.features {
+    background-color: #cfe2f3;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 100, 0.08);
+}
+
+.features h2 {
+    margin-bottom: 1rem;
+    color: #1d3557;
+    border-bottom: 2px solid #a3c9f1;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+.features ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+    color: #1a2c52;
+}
+
+.features li {
+    margin-bottom: 0.5rem;
+}
+
+
+.about {
+    background-color: #d8eafe;
+    padding: 1.5rem;
+}
+
+.testimonials {
+    background-color: #d9eafa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 100, 0.05);
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow wrapping to next line */
+    justify-content: center;
+    /* Center the testimonials horizontally */
+    gap: 1rem;
+    /* Optional: space between testimonials */
+}
+
+.testimonials .testimonial {
+    flex: 1 1 45%;
+    /* Flex grow, shrink, basis; roughly 45% width */
+    max-width: 50%;
+    /* Ensure no wider than 50% */
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    /* Bottom margin for spacing */
+    border-left: 5px solid #3b82f6;
+    background-color: #fdfdfd;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    /* Include padding and border in width calculations */
+}
+
+.feedback {
+    background-color: #f0f8ff;
+    border-left: 5px solid #2563eb;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.feedback blockquote {
+    background: #e2ecfb;
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    border-left: 5px solid #1e40af;
+    border-radius: 6px;
+    font-style: italic;
+    color: #1d3557;
+}
+
+.feedback cite {
+    display: block;
+    text-align: right;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #3b4f73;
+}
+
+
+.faq details {
+    background: #f2f6ff;
+    border: 1px solid #b3d4fc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.faq summary {
+    font-weight: bold;
+    color: #1e40af;
+    font-size: 1.05rem;
+}
+
+.faq p {
+    margin-top: 0.5rem;
+    color: #123e6d;
+}
+
+
+.contact {
+    background-color: #d9eafa;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 100, 0.05);
+}
+
+.contact h2 {
+    margin-bottom: 1rem;
+    color: #1e3a8a;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label {
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #123e6d;
+}
+
+.contact input,
+.contact textarea {
+    padding: 0.7rem;
+    border: 1px solid #a6c8ef;
+    border-radius: 6px;
+    margin-top: 0.3rem;
+    font-size: 1rem;
+    background-color: #f8fbff;
+    color: #1a2c52;
+}
+
+.contact button {
+    margin-top: 1.5rem;
+    background-color: #1e40af;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #2563eb;
+}
+
+
+footer {
+    background-color: #1e3a8a;
+    color: #dbeafe;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+}

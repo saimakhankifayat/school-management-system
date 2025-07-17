@@ -1,0 +1,133 @@
+/* Reset base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eaf4ff;
+  color: #123e6d;
+  line-height: 1.6;
+}
+
+/* Header (reuse if not already defined in global) */
+header {
+  background-color: #0246ff;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-right: 1rem;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav li a {
+  text-decoration: none;
+  color: rgb(56, 55, 55);
+  background-color: #cccccc;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  transition: 0.3s ease;
+}
+
+nav li a:hover {
+  color: #cccccc;
+  background-color: rgb(56, 55, 55);
+}
+
+/* Login Form Styling */
+.login-form {
+  background-color: #ffffff;
+  max-width: 400px;
+  margin: 4rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 64, 128, 0.1);
+}
+
+.login-form h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #1e3a8a;
+}
+
+.login-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #123e6d;
+}
+
+.login-form input {
+  margin-top: 0.3rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #a6c8ef;
+  border-radius: 6px;
+  background-color: #f8fbff;
+}
+
+.login-form button {
+  margin-top: 2rem;
+  padding: 0.9rem;
+  font-size: 1rem;
+  background-color: #1e40af;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-form {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+  }
+
+  nav li a {
+    padding: 0.8rem 1rem;
+  }
+}

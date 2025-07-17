@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Form</title>
+    <link rel="stylesheet" href="styles/global.css">
+  </head>
+  <body>
+    <div class="container">
+       <nav>
+                <ul>
+                    <li><a href="dashborad.html">Dashboard</a></li>
+                    <li><a href="analytics.html">Analytics</a></li>
+                    <li><a href="teacher-form.html">Teacher form</a></li>
+                    <li><a href="#">Student </a>
+                    <ul>
+                        <li><a href="student-form.html">Student Record </a></li>
+                        <li><a href="student-dmc-create.html">Create DMC </a></li>
+                        <li><a href="student-dmc.html">view DMC</a></li>
+                    </ul>
+                    
+                    </li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="index.html">Sign out</a></li>
+                </ul>
+            </nav>
+      <main class="main-content">
+        <section class="form">
+          <h2>Teacher Form</h2>
+          <form>
+            <div class="form-row">
+              <label for="teacherName">Teacher Name:</label>
+              <input type="text" id="teacherName" name="teacherName" required>
+            </div>
+
+            <div class="form-row">
+              <label for="subject">Subject:</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-row">
+              <label for="phone">Phone:</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-row">
+              <label for="status">Employment Status:</label>
+              <select id="status" name="status">
+                <option value>Select Status</option>
+                <option value="full-time">Full-Time</option>
+                <option value="part-time">Part-Time</option>
+                <option value="on-leave">On Leave</option>
+              </select>
+            </div>
+
+            <div class="form-row full-width">
+              <label for="notes">Notes:</label>
+              <textarea id="notes" name="notes" rows="3"
+                placeholder="Any additional notes..."></textarea>
+            </div>
+
+            <div class="form-row full-width">
+              <button type="submit">Save Teacher</button>
+            </div>
+          </form>
+        </section>
+
+      </div>
