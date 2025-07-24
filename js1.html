@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <body>
+
+            <h1 id="title">Welcome</h1>
+            <div id="message"> Welcome to javascript </div>
+            <input type="text" id="inputField" value="Hello" placeholder="Type something...">
+            <button id="action_button" onclick="setMessage()">action</button>
+            <button id="btn_printname" onclick="printName()">print</button>
+            <button id="print_multinames" onclick="multinames()">multinames</button>
+            <div id="multiNames">
+
+            </div>
+        </body>
+    </html>
+    <script>
+        var t_message = "";
+
+        function setMessage() {
+            t_message = document.getElementById("inputField").value;
+           // document.getElementById("message").innerHTML = t_message;
+            document.getElementById("message").innerHTML = "<h2>"+ t_message + "</h2>";
+        }
+        function printName() {
+            var names ="";
+            names = document.getElementById("inputField").value;
+            names = names +" "+ "<b>"+ names +"</b>"+ " " + names;
+            document.getElementById("message").innerHTML = names ;
+                  
+        }
+        function multinames() {
+            var name = document.getElementById("inputField").value;
+            for (var i = 0; i < 100; i++) {
+                document.getElementById("multiNames").innerHTML += "<h3>" + name + " " + i + "</h3>";
+            }
+        }
+    </script>

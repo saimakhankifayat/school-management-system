@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="styles/global.css">
+        <link rel="stylesheet" href="styles/dashborad.css">
+        <link rel="stylesheet" href="styles/calculator.css">
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="dashborad.html">Dashboard</a></li>
+                    <li><a href="analytics.html">Analytics</a></li>
+                    <li><a href="teacher-form.html">Teacher form</a></li>
+                    <li><a href="#">Student </a>
+                        <ul>
+                            <li><a href="student-form.html">Student Record
+                                </a></li>
+                            <li><a href="student-dmc-create.html">Create DMC
+                                </a></li>
+                            <li><a href="student-dmc.html">view DMC</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="index.html">Sign out</a></li>
+                </ul>
+            </nav>
+            <main class="main-content">
+                <div class="calculator">
+                    <h2><strong>Calculator</strong></h2>
+
+                    <table>
+                        <tr>
+                            <td colspan="4"> <input type="hidden"
+                                    name="t_value" id="t_value"> </td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="4"> <input type="text"
+                                    name="screen_value" id="screen_value"> </td>
+
+                        </tr>
+                        <tr>
+                            <td> <button name="num7" id="num7"
+                                    onclick="putNumber(7)">7</button></td>
+                            <td> <button name="num8" id="num8"
+                                    onclick="putNumber(8)">8</button></td>
+                            <td> <button name="num9" id="num9"
+                                    onclick="putNumber(9)">9</button></td>
+                            <td> <button name="operator_plus"
+                                    id="operator_plus"
+                                    onclick="setOperator('+')">+</button></td>
+
+                        </tr>
+                        <tr>
+                            <td> <button name="num4" id="num4"
+                                    onclick="putNumber(4)">4</button></td>
+                            <td> <button name="num5" id="num5"
+                                    onclick="putNumber(5)">5</button></td>
+                            <td> <button name="num6" id="num6"
+                                    onclick="putNumber(6)">6</button></td>
+                            <td> <button name="operator_minus"
+                                    id="operator_minus"
+                                    onclick="setOperator('-')">-</button></td>
+
+                        </tr>
+                        <tr>
+                            <td> <button name="num3" id="num3"
+                                    onclick="putNumber(3)">3</button></td>
+                            <td> <button name="num2" id="num2"
+                                    onclick="putNumber(2)">2</button></td>
+                            <td> <button name="num1" id="num1"
+                                    onclick="putNumber(1)">1</button></td>
+                            <td> <button name="operator_multiply"
+                                    id="operator_multiply"
+                                    onclick="setOperator('*')">*</button></td>
+
+                        </tr>
+                        <tr>
+                            <td> <button name="clear_button"
+                                    id="clear_button" onclick="clear_all()">AC</button></td>
+                            <td> <button name="num0" id="num0"
+                                    onclick="putNumber(0)">0</button></td>
+                            <td> <button name="dot" id="dot"
+                                    onclick="putDecimalSymbol()">.</button></td>
+                            <td> <button name="operator_equal"
+                                    id="operator_equal"
+                                    class="equal_button"
+                                    onclick="equal()">=</button></td>
+
+                        </tr>
+                    </table>
+
+                </div>
+            </main>
+            <footer>
+                &copy; 2023 Drixal School Management System. All rights
+                reserved.
+            </footer>
+        </div>
+    </body>
+</html>
+<script>
+
+    var temp_screen_value = "";
+    var operator = "";
+
+    function putNumber(num) {
+        document.getElementById("screen_value").value += num;
+    }
+
+     function setOperator(op) {
+        operator = op;
+        temp_screen_value = document.getElementById("screen_value").value;
+        document.getElementById("screen_value").value = "";
+        document.getElementById("t_value").value = temp_screen_value + " " + operator + " ";
+     }
+      function equal() {
+        var current_value = document.getElementById("screen_value").value;
+        var result = 0;
+
+        switch (operator) {
+            case '+':
+                result = parseFloat(temp_screen_value) + parseFloat(current_value);
+                break;
+            case '-':
+                result = parseFloat(temp_screen_value) - parseFloat(current_value);
+                break;
+            case '*':
+                result = parseFloat(temp_screen_value) * parseFloat(current_value);
+                break;
+            case '/':
+                result = parseFloat(temp_screen_value) / parseFloat(current_value);
+                break;
+            default:
+                result = "Error";
+        }
+
+        document.getElementById("screen_value").value = result;
+        document.getElementById("t_value").value += current_value + " = " + result;
+      }
+    function putDecimalSymbol() {
+        if (document.getElementById("screen_value").value.indexOf('.') === -1) {
+            // Only add a decimal point if it doesn't already exist
+       document.getElementById( "screen_value").value = document.getElementById("screen_value").value + "." ;
+    }
+    }
+    function clear_all() {
+        temp_screen_value = "";
+        operator = "";
+        document.getElementById("screen_value").value = "";
+    }
+
+  //  putNumber (1);
+  //  putNumber (2);
+
+</script>

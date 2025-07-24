@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="styles/global.css">
+        <link rel="stylesheet" href="styles/dashborad.css">
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="dashborad.html">Dashboard</a></li>
+                    <li><a href="analytics.html">Analytics</a></li>
+                    <li><a href="teacher-form.html">Teacher form</a></li>
+                    <li><a href="#">Student </a>
+                    <ul>
+                        <li><a href="student-form.html">Student Record </a></li>
+                        <li><a href="student-dmc-create.html">Create DMC </a></li>
+                        <li><a href="student-dmc.html">view DMC</a></li>
+                    </ul>
+                    
+                    </li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="index.html">Sign out</a></li>
+                </ul>
+            </nav>
+            <main class="main-content">
+               <div id="title">
+                <h1> Generate math tables  </h1>
+                <label for="count">Enter count:</label>
+                <input type="text" id="count"  value="" placeholder="enter count.">
+                <label for="table_number">Enter message:</label>
+                <input type="text" id="table_number" value="" placeholder="Type something...">
+                <button id="btn_go" onclick="generateTable()">go</button>
+               </div>
+               <div id="message"></div>
+            </main>
+            <footer>
+                &copy; 2023 Drixal School Management System. All rights
+                reserved.
+            </footer>
+        </div>
+    </body>
+</html>
+<script>
+    var count = 0;
+    var number = "";
+  function generateTable() {
+     count = document.getElementById("count").value;
+     number = document.getElementById("table_number").value;
+     for (var i = 1 ; i <= count; i++) {
+        document.getElementById("message").innerHTML += " <h2>"+ number + "x" + i + "=" +(number* i) + "</h2>";
+     }
+
+  }
+</script>
